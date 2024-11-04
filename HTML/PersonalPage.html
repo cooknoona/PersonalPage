@@ -1,70 +1,137 @@
+<!-- 개인용 포트폴리오 페이지로 Footer부분을 없애고 스크롤시 각각 메뉴로 적용하였음 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <title>클론페이지</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <div id="container">
-      <div id="header">
-        <div id="logo">
-          <a href="#">
-            <h1>COOK Portfolio</h1>
+    <!-- 상단 네비 (고정으로 하면서 페이지 이동) -->
+    <nav id="nav" class="nav">
+      <ul class="topNav">
+        <li><a href="#about" class="nav__menu--foused">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- 상단부 부분 간단한 이름과 직업 (바디안에 포함 되지 않음) -->
+    <div id="mainContents">
+      <div id="mainTop">
+        <div id="myName">
+          <h3>COOKHYEONG LEE</h3>
+        </div>
+        <div id="myJob">
+          <h1>SOFTWARE DEVELOPER</h1>
+        </div>
+      </div>
+      <!-- 첫번째 Section "About" -->
+      <section id="aboutSection">
+        <div id="aboutHead">
+          <h2>ABOUT</h2>
+        </div>
+        <div id="introHead">
+          <h3>이국형 / 28세</h3>
+        </div>
+        <div id="introBody">
+          <p>안녕하세요 이국형입니다.</p>
+          <p>이하 내용 추가</p>
+        </div>
+        <div id="introBottom">
+          <div id="skillHead">
+            <h3>SKILLS</h3>
+          </div>
+          <ul id="skillDetail">
+            <li>JAVA</li>
+            <li>PYTHON</li>
+            <li>DATABASE</li>
+            <li>MORE</li>
+            <li>MORE</li>
+          </ul>
+          <div id="careerHead">
+            <h3>CAREER</h3>
+          </div>
+          <ul id="careerDetail">
+            <li>커리어1</li>
+            <li>커리어2</li>
+            <li>커리어3</li>
+          </ul>
+        </div>
+      </section>
+      <!-- 두번째 Section "Projects" -->
+      <section id="projectsSection">
+        <div id="projectsHead">
+          <h2>PROJECTS</h2>
+        </div>
+        <!-- Grid Set 위치 조정하여 두번째 Section 바디에 보이기 -->
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/project1.jpg" alt="Project Image" width="200" />
+            <p>프로젝트1</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/project2.jpg" alt="Project Image" width="200" />
+            <p>프로젝트2</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/project3.jpg" alt="Project Image" width="200" />
+            <p>프로젝트3</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/project4.jpg" alt="Project Image" width="200" />
+            <p>프로젝트4</p>
+          </div>
+        </div>
+      </section>
+      <!-- 세번째 Section "Portfolio" -->
+      <section id="portfolioSection">
+        <div id="portfolioHead">
+          <h2>PORTFOLIO</h2>
+        </div>
+        <!-- Grid Set 프로젝트 Section 과 마찬가지로 같은 크기 같은 위치로 조정 -->
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="images/portfolio1.jpg" alt="portfolio Image" />
+            <p>포트폴리오1</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/portfolio2.jpg" alt="portfolio Image" />
+            <p>포트폴리오2</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/portfolio3.jpg" alt="portfolio Image" />
+            <p>포트폴리오3</p>
+          </div>
+          <div class="grid-item">
+            <img src="images/portfolio4.jpg" alt="portfolio Image" />
+            <p>포트폴리오4</p>
+          </div>
+        </div>
+      </section>
+      <!-- 네번째 Sction "Contact" -->
+      <section id="contactSection">
+        <div id="contactHead">
+          <h2>CONTACT</h2>
+        </div>
+        <div id="contactlinks">
+          <a href="https://github.com/cooknoona" target="_blank">
+            <img src="images/githubLogo" alt="githubLogo" />
+          </a>
+          <a href="mailto:example@example.com" target="_blank">
+            <img src="images/googleLogo" alt="googleLogo" />
           </a>
         </div>
-        <nav>
-          <ul id="topNav">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+        <section id="contactBottom">
+          <ul>
+            <li>카카오뱅크 - 000-0000-000</li>
+            <li>TEL: 010-0000-0000</li>
+            <li>FAX: 02-0000-0000</li>
           </ul>
-        </nav>
-      </div>
-      <div id="mainContents">
-        <div id="mainTop">
-          <div id="myName">
-            <h3>COOKHYEONG LEE</h3>
-          </div>
-          <div id="myJob">
-            <h1>SOFTWARE DEVELOPER</h1>
-          </div>
-        </div>
-        <div id="mainBody">
-          <div id="bodyHeader">
-            <h2>ABOUT</h2>
-          </div>
-          <div id="introHead">
-            <h3>이국형 / 28세</h3>
-          </div>
-          <div id="introBody">
-            <p>안녕하세요 이국형입니다.</p>
-            <p>이하 내용 추가</p>
-          </div>
-          <div id="introBottom">
-            <div id="skillHead">
-              <h3>SKILLS</h3>
-            </div>
-            <ul id="skillDetail">
-              <li>JAVA</li>
-              <li>PYTHON</li>
-              <li>DATABASE</li>
-              <li>MORE</li>
-              <li>MORE</li>
-            </ul>
-            <div id="careerHead">
-              <h3>CAREER</h3>
-            </div>
-            <ul id="careerDetail">
-              <li>커리어1</li>
-              <li>커리어2</li>
-              <li>커리어3</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </div>
   </body>
 </html>
