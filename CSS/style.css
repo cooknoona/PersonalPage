@@ -32,19 +32,19 @@ a {
   color: #f5f7f7;
 }
 
-.navList {
+.nav_list {
   display: flex;
   justify-content: center;
 }
 
-.navList > li {
+.nav_list > li {
   padding: 40px;
   font-weight: bold;
   transition: all 0.3s;
   color: #f5f7f7;
 }
 
-.navList > li:hover {
+.nav_list > li:hover {
   transform: scale(1.05);
 }
 
