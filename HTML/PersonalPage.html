@@ -1,97 +1,102 @@
-<!-- 개인용 포트폴리오 페이지로 Footer부분을 없애고 스크롤시 각각 메뉴로 적용하였음 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="js/script.js" defer></script>
     <title>클론페이지</title>
-    <link rel="stylesheet" href="CSS/style.css" />
   </head>
   <body>
-    <!-- 상단 네비 (고정으로 하면서 페이지 이동) -->
-    <nav id="nav" class="nav">
-      <ul class="topNav">
-        <li><a href="#about" class="nav__menu--foused">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- 상단부 부분 간단한 이름과 직업 (바디안에 포함 되지 않음) -->
-    <div id="mainContents">
-      <div id="mainTop">
-        <div id="myName">
-          <h3>COOKHYEONG LEE</h3>
+    <!-- 모든것을 감싸는 메인태그 Body 안에 포함된다 -->
+    <main class="container">
+      <!-- 네비바 전체를 포함하는 태그 (로고, 메뉴, 언어변경 3가지 태그 포함) -->
+      <nav id="nav" class="nav">
+        <!-- 로고 링크 (네비바 왼쪽) -->
+        <a href="#" class="logo">logo</a>
+        <!-- 네비 리스트 태그 (네비바 중앙)-->
+        <ul class="nav_list">
+          <li><a href="#about_section" id="cate1">ABOUT</a></li>
+          <li><a href="#projects_section" id="cate2">PROJECTS</a></li>
+          <li><a href="#portfolio_section" id="cate3">PORTFOLIO</a></li>
+          <li><a href="#contact_section" id="cate4">CONTACT</a></li>
+          <div class="marker"></div>
+        </ul>
+        <!-- 언어변경 버튼 태그 (네비바 우측) -->
+        <div class="langueges">
+          <label for="languageSelect"></label>
+          <button id="Korean-button" onclick="changeLanguage('ko')">Korean</button>
+          <button id="English_button" onclick="changeLanguage('en')">English</button>
         </div>
-        <div id="myJob">
-          <h1>SOFTWARE DEVELOPER</h1>
-        </div>
+      </nav>
+      <!-- 본문을 시작하기전 이름과 직업 -->
+      <div class="intro">
+        <h1>COOKHYEONG LEE</h1>
+        <h2>SOFTWARE DEVELOPER</h2>
       </div>
-      <!-- 첫번째 Section "About" -->
-      <section id="aboutSection">
-        <div id="aboutHead">
+      <!-- ABOUT 페이지 전체를 감싸는 Section 공통된 사이즈로 하여 Class태그 추가
+       그리고 각 페이지마다 다른 배경색을 위한 ID값이 존재 -->
+      <section id="about_section" class="section">
+        <!-- 각 페이지마다 타이틀만을 위한 태그 -->
+        <div class="about_title">
           <h2>ABOUT</h2>
         </div>
-        <div id="introHead">
-          <h3>이국형 / 28세</h3>
-        </div>
-        <div id="introBody">
-          <p>안녕하세요 이국형입니다.</p>
-          <p>이하 내용 추가</p>
-        </div>
-        <div id="introBottom">
-          <div id="skillHead">
+        <!-- About 본문내용 좌측 Padding으로 한번에 정렬 (타이틀은 가운데 고정이므로 따로 태그 생성) -->
+        <div class="about_layout">
+          <h3><span class="name">이국형</span>/ 28세</h3>
+          <div class="about_content">
+            <p>안녕하세요 이 글은 글자의 크기를 알아 보기 위해 작성</p>
+            <p>내용을 채우기 위해서 그냥 아무 글이나 작성 했으니 무시 해 주세요</p>
+            <p>자장면 탕수육 양장피 볶음밥 계란찜 뼈감자탕 갈비 삼겹살 육개장 만두 김치</p>
+            <p>돼지갈비찜, 피자 햄버거 치킨 콜라 맥주 마시고 싶다.</p>
+          </div>
+          <div class="skill_and_career">
             <h3>SKILLS</h3>
-          </div>
-          <ul id="skillDetail">
-            <li>JAVA</li>
-            <li>PYTHON</li>
-            <li>DATABASE</li>
-            <li>MORE</li>
-            <li>MORE</li>
-          </ul>
-          <div id="careerHead">
+            <div class="skill_list">
+              <ul>
+                <li>JAVA</li>
+                <li>PYTHON</li>
+                <li>DATABASE</li>
+                <li>MORE</li>
+              </ul>
+            </div>
             <h3>CAREER</h3>
+            <div class="career_list">
+              <ul>
+                <li>커리어1</li>
+                <li>커리어2</li>
+                <li>커리어3</li>
+              </ul>
+            </div>
           </div>
-          <ul id="careerDetail">
-            <li>커리어1</li>
-            <li>커리어2</li>
-            <li>커리어3</li>
-          </ul>
         </div>
       </section>
-      <!-- 두번째 Section "Projects" -->
-      <section id="projectsSection">
-        <div id="projectsHead">
-          <h2>PROJECTS</h2>
-        </div>
-        <!-- Grid Set 위치 조정하여 두번째 Section 바디에 보이기 -->
+
+      <section id="projects_section" class="section">
+        <h2>PROJECTS</h2>
         <div class="grid-container">
           <div class="grid-item">
-            <img src="images/project1.jpg" alt="Project Image" width="200" />
+            <img src="images/project1.jpg" alt="Project Image" />
             <p>프로젝트1</p>
           </div>
           <div class="grid-item">
-            <img src="images/project2.jpg" alt="Project Image" width="200" />
+            <img src="images/project2.jpg" alt="Project Image" />
             <p>프로젝트2</p>
           </div>
           <div class="grid-item">
-            <img src="images/project3.jpg" alt="Project Image" width="200" />
+            <img src="images/project3.jpg" alt="Project Image" />
             <p>프로젝트3</p>
           </div>
           <div class="grid-item">
-            <img src="images/project4.jpg" alt="Project Image" width="200" />
+            <img src="images/project4.jpg" alt="Project Image" />
             <p>프로젝트4</p>
           </div>
         </div>
       </section>
-      <!-- 세번째 Section "Portfolio" -->
-      <section id="portfolioSection">
-        <div id="portfolioHead">
-          <h2>PORTFOLIO</h2>
-        </div>
-        <!-- Grid Set 프로젝트 Section 과 마찬가지로 같은 크기 같은 위치로 조정 -->
+
+      <section id="portfolio_section" class="section">
+        <h2>PORTFOLIO</h2>
         <div class="grid-container">
           <div class="grid-item">
             <img src="images/portfolio1.jpg" alt="portfolio Image" />
@@ -111,27 +116,18 @@
           </div>
         </div>
       </section>
-      <!-- 네번째 Sction "Contact" -->
-      <section id="contactSection">
-        <div id="contactHead">
-          <h2>CONTACT</h2>
-        </div>
-        <div id="contactlinks">
+
+      <section id="contactSection" class="section">
+        <h2>CONTACT</h2>
+        <div class="contactlinks">
           <a href="https://github.com/cooknoona" target="_blank">
             <img src="images/githubLogo" alt="githubLogo" />
           </a>
           <a href="mailto:example@example.com" target="_blank">
-            <img src="images/googleLogo" alt="googleLogo" />
+            <img src="images/googleEmailLogo" alt="googleEmailLogo" />
           </a>
         </div>
-        <section id="contactBottom">
-          <ul>
-            <li>카카오뱅크 - 000-0000-000</li>
-            <li>TEL: 010-0000-0000</li>
-            <li>FAX: 02-0000-0000</li>
-          </ul>
-        </section>
       </section>
-    </div>
+    </main>
   </body>
 </html>

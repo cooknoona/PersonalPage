@@ -1,5 +1,152 @@
-#nav {
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  margin-top: 70px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
-  width: 100px;
-  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #000407;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  display: flex;
+  justify-content: start;
+  padding-left: 50px;
+  font-size: 30px;
+  color: #f5f7f7;
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+}
+
+.navList > li {
+  padding: 40px;
+  font-weight: bold;
+  transition: all 0.3s;
+  color: #f5f7f7;
+}
+
+.navList > li:hover {
+  transform: scale(1.05);
+}
+
+.langueges {
+  padding-right: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.langueges button {
+  background-color: #000407;
+  width: 70px;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #f5f7f7;
+  padding: 5px 5px;
+  transition: all 0.3s;
+  border: none;
+}
+
+.langueges button:hover {
+  transform: scale(1.05);
+}
+
+.marker {
+  content: "";
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background-color: purple;
+  transition: 0.2s;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  height: 300px;
+  background: linear-gradient(to right, #79031d, #9b1a3a, #79031d);
+}
+
+.intro > h1 {
+  font-size: 30px;
+  font-style: oblique;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #f0f0f0;
+  margin-bottom: 100px;
+}
+
+.intro > h2 {
+  font-size: 40px;
+  font-style: oblique;
+  font-weight: bolder;
+  color: #ede3d2;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  height: 1000px;
+}
+
+#about_section {
+  background-color: aquamarine;
+}
+
+#projects_section {
+  background-color: aqua;
+}
+
+#projects_section {
+  background-color: aliceblue;
+}
+
+#contact_section {
+  background-color: #9b1a3a;
+}
+
+.about_title {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+}
+
+.about_layout {
+  display: flex;
+  padding-left: 30px;
+}
+
+.name {
+  font-weight: bold;
+  color: #6184c6;
+  font-size: 25px;
+}
+
+.about_content > p {
+  padding-top: 10px;
+  font-size: 20px;
 }
