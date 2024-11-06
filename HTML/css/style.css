@@ -115,22 +115,22 @@ a {
 }
 
 #about_section {
+  background-color: aliceblue;
+}
+
+#projects_section {
   background-color: aquamarine;
 }
 
-#projects_section {
+#portfolio_section {
   background-color: aqua;
-}
-
-#projects_section {
-  background-color: aliceblue;
 }
 
 #contact_section {
   background-color: #9b1a3a;
 }
 
-.about_title {
+.page_title {
   display: flex;
   justify-content: center;
   padding-top: 60px;
@@ -140,14 +140,19 @@ a {
 
 .about_layout {
   display: flex;
+  justify-content: space-between;
   padding-left: 30px;
+  padding-right: 110px;
+  padding-top: 140px;
 }
 
 .about_left_layout {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  padding-top: 70px;
+}
+
+.about_left_layout > h3 {
+  font-size: 26px;
 }
 
 .name {
@@ -157,8 +162,8 @@ a {
 }
 
 .about_content {
-  padding-top: 10px;
-  font-size: 20px;
+  padding-top: 14px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -169,26 +174,72 @@ a {
   padding-top: 50px;
 }
 
-.project_title {
+.skill_title {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   padding-top: 60px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
 }
 
-.portfolio_title {
-  display: flex;
-  justify-content: center;
-  padding-top: 60px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 50px;
+.skill_grid_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 */
+  grid-template-rows: repeat(2, auto); /* 2행, 자동 높이 설정 */
+  gap: 1rem;
+  padding-top: 20px;
 }
 
-.contact_title {
+.skill_item {
   display: flex;
-  justify-content: center;
+  flex-direction: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.skill_item > img {
+  width: 38px;
+  height: 38px;
+}
+
+.skill_item > p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.career_title {
+  display: flex;
+  justify-content: start;
   padding-top: 60px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 50px;
+  font-size: 30px;
+}
+
+.career_list {
+  padding-top: 20px;
+  line-height: 1.8;
+}
+
+.career_list > li {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.about_right_layout {
+  display: flex;
+  flex-direction: start;
+}
+
+.my_selfie img {
+  height: 650px;
+  width: 500px;
+  border-radius: 30px;
+}
+
+.project_layout {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 130px;
 }

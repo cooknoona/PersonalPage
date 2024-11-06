@@ -32,14 +32,14 @@
       </nav>
       <!-- 본문을 시작하기전 이름과 직업 -->
       <div class="intro">
-        <h1>COOKHYEONG LEE</h1>
-        <h2>SOFTWARE DEVELOPER</h2>
+        <h1 id="my_name">COOKHYEONG LEE</h1>
+        <h2 id="my_job">SOFTWARE DEVELOPER</h2>
       </div>
       <!-- About 페이지 전체를 감싸는 Section 공통된 사이즈로 하여 Class태그 추가
        그리고 각 페이지마다 다른 배경색을 위한 ID값이 존재 -->
       <section id="about_section" class="section">
-        <!-- 각 페이지마다 타이틀만을 위한 태그 -->
-        <div class="about_title">
+        <!-- 각 페이지마다 타이틀만을 위한 태그 (4가지 페이지 모두 동일 태그) -->
+        <div class="page_title">
           <h2>ABOUT</h2>
         </div>
         <!-- About 타이틀을 제외한 본문내용 (타이틀은 가운데 고정이므로 따로 태그 생성) -->
@@ -47,72 +47,102 @@
           <!-- 본문 타이틀을 제외한 왼쪽 레이아웃 -->
           <div class="about_left_layout">
             <!-- 본문 왼쪽 타이틀 제일 상단에 위치 -->
-            <h3><span class="name">이국형</span>/ 28세</h3>
+            <h3><span class="name" id="my_name_in_content">이국형</span> / 28</h3>
             <!-- 제목과 내용을 분리하기 위한 태그 -->
             <div class="about_content">
-              <p>안녕하세요 이 본문은 글자의 크기와 폰트를 알아 보기 위해 작성</p>
-              <p>내용을 채우기 위해서 그냥 아무 글이나 작성 했으니 무시 해 주세요</p>
-              <p>자장면 탕수육 양장피 볶음밥 계란찜 뼈감자탕 갈비 삼겹살 육개장 김치만두</p>
-              <p>물냉면 양념게장, 해장국 순대국 근데 오늘 저녁은 뭐먹지</p>
-              <p>돼지갈비찜, 피자 햄버거, 프로젝트 끝나고 치킨에 맥주 마시고 싶다.</p>
+              <p id="about_content1">안녕하세요 이 본문은 글자의 크기와 폰트를 알아 보기 위해 작성</p>
+              <p id="about_content2">내용을 채우기 위해서 그냥 아무 글이나 작성 했으니 무시 해 주세요</p>
+              <p id="about_content3">자장면 탕수육 양장피 볶음밥 계란찜 뼈감자탕 갈비 삼겹살 육개장 김치만두</p>
+              <p id="about_content4">물냉면 양념게장, 해장국 순대국 근데 오늘 저녁은 뭐먹지</p>
+              <p id="about_content5">돼지갈비찜, 피자 햄버거, 프로젝트 끝나고 치킨에 맥주 마시고 싶다.</p>
             </div>
-            <!-- 기술과 경력 합친 태그 -->
+            <!-- skill 과 career 합친 태그 -->
             <div class="skill_and_career">
               <div class="skill_title">
                 <h3>SKILLS</h3>
               </div>
-              <div class="skill_list">
-                <ul>
-                  <li>JAVA</li>
-                  <li>PYTHON</li>
-                  <li>DATABASE</li>
-                  <li>MORE</li>
-                </ul>
+              <div class="skill_grid_container">
+                <div class="skill_item">
+                  <img src="images/java.png" alt="자바" />
+                  <p>Java</p>
+                </div>
+                <div class="skill_item">
+                  <img src="images/python.png" alt="파이썬" />
+                  <p>Python</p>
+                </div>
+                <div class="skill_item">
+                  <img src="images/oracle.png" alt="오라클" />
+                  <p>Oracle</p>
+                </div>
+                <div class="skill_item">
+                  <img src="images/html.png" alt="HTML" />
+                  <p>HTML</p>
+                </div>
+                <div class="skill_item">
+                  <img src="images/css.png" alt="CSS" />
+                  <p>CSS</p>
+                </div>
+                <div class="skill_item">
+                  <img src="images/javascript.png" alt="JS" />
+                  <p>JavaScript</p>
+                </div>
               </div>
               <div class="career_title">
                 <h3>CAREER</h3>
               </div>
               <div class="career_list">
                 <ul>
-                  <li>커리어1</li>
-                  <li>커리어2</li>
-                  <li>커리어3</li>
+                  <li id="career_content1">쓸만한 커리아가 뭐가 있을까요?</li>
+                  <li id="career_content2">커리어를 대신 할 공간입니다.</li>
+                  <li id="career_content3">커리어는 많을수록 좋아요!</li>
                 </ul>
               </div>
             </div>
           </div>
           <!-- About 타이틀을 제외한 우측에 위치할 레이아웃 (증명사진) -->
-          <div class="about_laout_right">
+          <div class="about_right_layout">
             <!-- 증명사진이 들어갈 우측공간 -->
-            <div class="my_selfie"></div>
+            <div class="my_selfie">
+              <img src="images/baby yoda.jpg" alt="요다" />
+            </div>
           </div>
         </div>
       </section>
       <!-- Projects 페이지 전체를 감싸는 Section 공통된 사이즈로 하여 Class태그 추가
        그리고 각 페이지마다 다른 배경색을 위한 ID값이 존재 -->
       <section id="projects_section" class="section">
-        <!-- 프로젝트 타이틀 부분만 따로 태그 -->
-        <div class="project_title">
+        <!-- 각 페이지마다 타이틀만을 위한 태그 (4가지 페이지 모두 동일 태그) -->
+        <div class="page_title">
           <h2>PROJECTS</h2>
         </div>
-        <!-- 프로젝트 전체 틀 태그 -->
-        <div class="grid-container">
-          <!-- 프로젝트 내부 태그 -->
-          <div class="grid-item">
-            <img src="images/project1.jpg" alt="Project Image" />
-            <p>프로젝트1</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/project2.jpg" alt="Project Image" />
-            <p>프로젝트2</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/project3.jpg" alt="Project Image" />
-            <p>프로젝트3</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/project4.jpg" alt="Project Image" />
-            <p>프로젝트4</p>
+        <!-- 프로젝트 타이틀 제외한 레이아웃 -->
+        <div class="project_layout">
+          <!-- 프로젝트 목록 전체 태그 -->
+          <div class="project_grid_container">
+            <div class="project_item">
+              <div class="project_item_image1"></div>
+              <div class="project_description">프로젝트1 설명공간</div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image2"></div>
+              <div class="project_description">프로젝트2 설명공간</div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image3"></div>
+              <div class="project_description">프로젝트3 설명공간</div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image4"></div>
+              <div class="project_description">프로젝트4 설명공간</div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image5"></div>
+              <div class="project_description">프로젝트5 설명공간</div>
+            </div>
+            <div class="project_item">
+              <div class="project_item_image6"></div>
+              <div class="project_description">프로젝트6 설명공간</div>
+            </div>
           </div>
         </div>
       </section>
@@ -120,27 +150,38 @@
       <!-- Portfolio 페이지 전체를 감싸는 Section 공통된 사이즈로 하여 Class태그 추가
        그리고 각 페이지마다 다른 배경색을 위한 ID값이 존재 -->
       <section id="portfolio_section" class="section">
-        <!-- 포트폴리오 타이틀 태그 -->
-        <div class="portfolio_title">
+        <!-- 각 페이지마다 타이틀만을 위한 태그 (4가지 페이지 모두 동일 태그) -->
+        <div class="page_title">
           <h2>PORTFOLIO</h2>
         </div>
-        <!-- 상단 프로젝트와 같은 태그 -->
-        <div class="grid-container">
-          <div class="grid-item">
-            <img src="images/portfolio1.jpg" alt="portfolio Image" />
-            <p>포트폴리오1</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/portfolio2.jpg" alt="portfolio Image" />
-            <p>포트폴리오2</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/portfolio3.jpg" alt="portfolio Image" />
-            <p>포트폴리오3</p>
-          </div>
-          <div class="grid-item">
-            <img src="images/portfolio4.jpg" alt="portfolio Image" />
-            <p>포트폴리오4</p>
+        <!-- 포트폴리오 타이틀 제외한 내부 레이아웃 -->
+        <div class="portfolio_layout">
+          <!-- 포트폴리오 목록 태그 -->
+          <div class="portfolio_grid_container">
+            <div class="portfolio_item">
+              <div class="portfolio_item_image1"></div>
+              <div class="portfolio_description">포트폴리오1 설명공간</div>
+            </div>
+            <div class="portfolio_item">
+              <div class="portfolio_item_image2"></div>
+              <div class="portfolio_description">포트폴리오2 설명공간</div>
+            </div>
+            <div class="portfolio_item">
+              <div class="portfolio_item_image3"></div>
+              <div class="portfolio_description">포트폴리오3 설명공간</div>
+            </div>
+            <div class="portfolio_item">
+              <div class="portfolio_item_image4"></div>
+              <div class="portfolio_description">포트폴리오4 설명공간</div>
+            </div>
+            <div class="portfolio_item">
+              <div class="portfolio_item_image5"></div>
+              <div class="portfolio_description">포트폴리오5 설명공간</div>
+            </div>
+            <div class="portfolio_item">
+              <div class="portfolio_item_image6"></div>
+              <div class="portfolio_description">포트폴리오6 설명공간</div>
+            </div>
           </div>
         </div>
       </section>
@@ -148,17 +189,20 @@
       <!-- Contact 페이지 전체를 감싸는 Section 공통된 사이즈로 하여 Class태그 추가
        그리고 각 페이지마다 다른 배경색을 위한 ID값이 존재 -->
       <section id="contact_section" class="section">
-        <!-- Contact 부분 타이틀 태그 -->
-        <div class="contact_title">
+        <!-- 각 페이지마다 타이틀만을 위한 태그 (4가지 페이지 모두 동일 태그) -->
+        <div class="page_title">
           <h2>CONTACT</h2>
         </div>
-        <div class="contactlinks">
-          <a href="https://github.com/cooknoona" target="_blank">
-            <img src="images/githubLogo" alt="githubLogo" />
-          </a>
-          <a href="mailto:example@example.com" target="_blank">
-            <img src="images/googleEmailLogo" alt="googleEmailLogo" />
-          </a>
+        <!-- 연락처 타이틀을 제외한 전체 레이아웃 -->
+        <div class="contact_layoug">
+          <div class="contactlinks">
+            <a href="https://github.com/cooknoona" target="_blank">
+              <img src="images/githubLogo" alt="githubLogo" />
+            </a>
+            <a href="mailto:example@example.com" target="_blank">
+              <img src="images/googleEmailLogo" alt="googleEmailLogo" />
+            </a>
+          </div>
         </div>
       </section>
     </main>
