@@ -21,7 +21,6 @@
           <li><a href="#projects_section">PROJECTS</a></li>
           <li><a href="#portfolio_section">PORTFOLIO</a></li>
           <li><a href="#contact_section">CONTACT</a></li>
-          <div class="marker"></div>
         </ul>
         <!-- 언어변경 버튼 태그 (네비바 우측) -->
         <div class="langueges">
@@ -50,52 +49,62 @@
             <h3><span class="name" id="my_name_in_content">이국형</span> / 28</h3>
             <!-- 제목과 내용을 분리하기 위한 태그 -->
             <div class="about_content">
-              <p id="about_content1">안녕하세요 이 본문은 글자의 크기와 폰트를 알아 보기 위해 작성</p>
-              <p id="about_content2">내용을 채우기 위해서 그냥 아무 글이나 작성 했으니 무시 해 주세요</p>
-              <p id="about_content3">자장면 탕수육 양장피 볶음밥 계란찜 뼈감자탕 갈비 삼겹살 육개장 김치만두</p>
-              <p id="about_content4">물냉면 양념게장, 해장국 순대국 근데 오늘 저녁은 뭐먹지</p>
-              <p id="about_content5">돼지갈비찜, 피자 햄버거, 프로젝트 끝나고 치킨에 맥주 마시고 싶다.</p>
+              <p id="about_content">
+                안녕하세요 이 본문은 글자의 크기와 폰트를 알아 보기 위해 작성 내용을 채우기 위해서 그냥 아무 글이나 작성 했으니 무시 해 주세요 자장면 탕수육
+                양장피 볶음밥 계란찜 뼈감자탕 갈비 삼겹살 육개장 김치만두 물냉면 양념게장, 해장국 순대국 근데 오늘 저녁은 뭐먹지 돼지갈비찜, 피자 햄버거,
+                프로젝트 끝나고 치킨에 맥주 마시고 싶다.
+              </p>
             </div>
             <!-- skill 과 career 합친 태그 -->
             <div class="skill_and_career">
-              <div class="skill_title">
-                <h3>SKILLS</h3>
+              <div class="skill_all">
+                <div class="skill_title">
+                  <h3>SKILLS</h3>
+                </div>
+                <div class="skill_item_container">
+                  <div class="skill_item">
+                    <img src="images/java.png" alt="자바" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/python.png" alt="파이썬" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/oracle.png" alt="오라클" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/html.png" alt="HTML" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/css.png" alt="CSS" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/javascript.png" alt="JS" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/c.png" alt="C" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/c++.png" alt="C++" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/nodejs.png" alt="nodejs" />
+                  </div>
+                  <div class="skill_item">
+                    <img src="images/react.png" alt="react" />
+                  </div>
+                </div>
               </div>
-              <div class="skill_grid_container">
-                <div class="skill_item">
-                  <img src="images/java.png" alt="자바" />
-                  <p>Java</p>
+              <div class="career_all">
+                <div class="career_title">
+                  <h3>CAREER</h3>
                 </div>
-                <div class="skill_item">
-                  <img src="images/python.png" alt="파이썬" />
-                  <p>Python</p>
+                <div class="career_list">
+                  <ul>
+                    <li id="career_content1">쓸만한 커리아가 뭐가 있을까요?</li>
+                    <li id="career_content2">커리어를 대신 할 공간입니다.</li>
+                    <li id="career_content3">커리어는 많을수록 좋아요!</li>
+                  </ul>
                 </div>
-                <div class="skill_item">
-                  <img src="images/oracle.png" alt="오라클" />
-                  <p>Oracle</p>
-                </div>
-                <div class="skill_item">
-                  <img src="images/html.png" alt="HTML" />
-                  <p>HTML</p>
-                </div>
-                <div class="skill_item">
-                  <img src="images/css.png" alt="CSS" />
-                  <p>CSS</p>
-                </div>
-                <div class="skill_item">
-                  <img src="images/javascript.png" alt="JS" />
-                  <p>JavaScript</p>
-                </div>
-              </div>
-              <div class="career_title">
-                <h3>CAREER</h3>
-              </div>
-              <div class="career_list">
-                <ul>
-                  <li id="career_content1">쓸만한 커리아가 뭐가 있을까요?</li>
-                  <li id="career_content2">커리어를 대신 할 공간입니다.</li>
-                  <li id="career_content3">커리어는 많을수록 좋아요!</li>
-                </ul>
               </div>
             </div>
           </div>
@@ -118,30 +127,48 @@
         <!-- 프로젝트 타이틀 제외한 레이아웃 -->
         <div class="project_layout">
           <!-- 프로젝트 목록 전체 태그 -->
-          <div class="project_grid_container">
+          <div class="project_item_container">
             <div class="project_item">
-              <div class="project_item_image1"></div>
-              <div class="project_description">프로젝트1 설명공간</div>
+              <img src="/html/images/project1.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
             <div class="project_item">
-              <div class="project_item_image2"></div>
-              <div class="project_description">프로젝트2 설명공간</div>
+              <img src="/html/images/project2.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
             <div class="project_item">
-              <div class="project_item_image3"></div>
-              <div class="project_description">프로젝트3 설명공간</div>
+              <img src="/html/images/project3.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
             <div class="project_item">
-              <div class="project_item_image4"></div>
-              <div class="project_description">프로젝트4 설명공간</div>
+              <img src="/html/images/project4.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
             <div class="project_item">
-              <div class="project_item_image5"></div>
-              <div class="project_description">프로젝트5 설명공간</div>
+              <img src="/html/images/project5.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
             <div class="project_item">
-              <div class="project_item_image6"></div>
-              <div class="project_description">프로젝트6 설명공간</div>
+              <img src="/html/images/project6.jpg" alt="#" />
+              <div class="project_desc">
+                <h2>프로젝트 이름</h2>
+                <p>프로젝트 간단 설명</p>
+              </div>
             </div>
           </div>
         </div>
@@ -157,30 +184,58 @@
         <!-- 포트폴리오 타이틀 제외한 내부 레이아웃 -->
         <div class="portfolio_layout">
           <!-- 포트폴리오 목록 태그 -->
-          <div class="portfolio_grid_container">
+          <div class="portfolio_item_container">
             <div class="portfolio_item">
-              <div class="portfolio_item_image1"></div>
-              <div class="portfolio_description">포트폴리오1 설명공간</div>
+              <img src="/html/images/portfolio1.png" alt="#" />
+              <div class="portfolio_desc">
+                <h2>야후</h2>
+                <p>야후 웹사이트</p>
+              </div>
             </div>
             <div class="portfolio_item">
-              <div class="portfolio_item_image2"></div>
-              <div class="portfolio_description">포트폴리오2 설명공간</div>
+              <div class="portfolio_item">
+                <img src="/html/images/portfolio2.png" alt="#" />
+                <div class="portfolio_desc">
+                  <h2>파파고</h2>
+                  <p>파파고 웹사이트</p>
+                </div>
+              </div>
             </div>
             <div class="portfolio_item">
-              <div class="portfolio_item_image3"></div>
-              <div class="portfolio_description">포트폴리오3 설명공간</div>
+              <div class="portfolio_item">
+                <img src="/html/images/portfolio3.png" alt="#" />
+                <div class="portfolio_desc">
+                  <h2>넷플릭스</h2>
+                  <p>넷플릭스 웹사이트</p>
+                </div>
+              </div>
             </div>
             <div class="portfolio_item">
-              <div class="portfolio_item_image4"></div>
-              <div class="portfolio_description">포트폴리오4 설명공간</div>
+              <div class="portfolio_item">
+                <img src="/html/images/portfolio4.png" alt="#" />
+                <div class="portfolio_desc">
+                  <h2>네이버</h2>
+                  <p>네이버 웹사이트</p>
+                </div>
+              </div>
             </div>
             <div class="portfolio_item">
-              <div class="portfolio_item_image5"></div>
-              <div class="portfolio_description">포트폴리오5 설명공간</div>
+              <div class="portfolio_item">
+                <img src="/html/images/portfolio5.png" alt="#" />
+                <div class="portfolio_desc">
+                  <h2>구글</h2>
+                  <p>구글 웹사이트</p>
+                </div>
+              </div>
             </div>
             <div class="portfolio_item">
-              <div class="portfolio_item_image6"></div>
-              <div class="portfolio_description">포트폴리오6 설명공간</div>
+              <div class="portfolio_item">
+                <img src="/html/images/portfolio6.png" alt="#" />
+                <div class="portfolio_desc">
+                  <h2>다음</h2>
+                  <p>다음 웹사이트</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -194,13 +249,24 @@
           <h2>CONTACT</h2>
         </div>
         <!-- 연락처 타이틀을 제외한 전체 레이아웃 -->
-        <div class="contact_layoug">
-          <div class="contactlinks">
+        <div class="contact_layout">
+          <div class="contact_content">
+            <h3>Contact Me</h3>
+            <h1>I'm here for any co-operation and business contact</h1>
+            <div class="business_hour">
+              <ul>
+                <li>Monday - Friday: 9AM - 6PM (GMT+9)</li>
+                <li>Saturday Unavailable</li>
+                <li>Sunday Unavailable</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact_links">
             <a href="https://github.com/cooknoona" target="_blank">
-              <img src="images/githubLogo" alt="githubLogo" />
+              <img src="images/github.png" alt="githubLogo" />
             </a>
             <a href="mailto:example@example.com" target="_blank">
-              <img src="images/googleEmailLogo" alt="googleEmailLogo" />
+              <img src="images/gmail.png" alt="googleEmailLogo" />
             </a>
           </div>
         </div>
