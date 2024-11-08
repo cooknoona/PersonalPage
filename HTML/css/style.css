@@ -25,6 +25,15 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 반응형 웹 전용 아이콘 기본값을 숨김으로 표시한후 미디어쿼리를 통해
+화면 적용 */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+}
+
 .logo {
   display: flex;
   justify-content: start;
@@ -105,7 +114,7 @@ a {
 }
 
 #about_section {
-  background: linear-gradient(to right, #d4f1f9, #eaf8fb, #d4f1f9);
+  background: linear-gradient(to right, #edefee, #eaf8fb, #edefee);
 }
 
 #projects_section {
@@ -178,6 +187,7 @@ a {
 
 .skill_item_container {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(5, auto);
   grid-template-rows: repeat(2, auto);
   column-gap: 4rem;
@@ -192,6 +202,7 @@ a {
 }
 
 .skill_item > img {
+  display: flex;
   width: 38px;
   height: 38px;
 }
@@ -387,4 +398,56 @@ a {
   display: flex;
   flex-direction: row;
   gap: 2rem;
+}
+
+/* 미디어 쿼리, 모바일 또는 태블릿 전용 */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 1000;
+    background-color: #000407;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .skill_item > img {
+    /* max-width: 90%; */
+  }
+
+  .about_right_layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my_selfie img {
+    width: 80%; /* 부모 요소의 너비에 비례 */
+    height: auto; /* 이미지 비율 유지 */
+    max-height: 400px; /* 최대 높이 제한 */
+  }
+
+  .project_item > img {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 400px;
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my_selfie img {
+    width: 80%; /* 부모 요소의 너비에 비례 */
+    height: auto; /* 이미지 비율 유지 */
+    max-height: 400px; /* 최대 높이 제한 */
+  }
 }

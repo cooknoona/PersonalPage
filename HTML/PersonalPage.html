@@ -2,10 +2,16 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+    <!-- 미디어쿼리 메타 태그 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 웹페이지 내의 모든 마진 패딩 없애고 기본 제공되는 기능 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- CSS 태그 -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- 아이콘 라이브러리 (모바일 반응형 카테고리 메뉴바) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
     <title>클론페이지</title>
+    <!-- 자바 스크립트 태그 -->
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -13,6 +19,15 @@
     <main class="container">
       <!-- 네비바 전체를 포함하는 태그 (로고, 메뉴, 언어변경 3가지 태그 포함) -->
       <nav id="nav" class="nav">
+        <!-- 모바일 반응형 웹전용 아이콘 -->
+        <div class="mobile_menu">
+          <ul class="mobile_list">
+            <li><a href="#about_section">ABOUT</a></li>
+            <li><a href="#projects_section">PROJECTS</a></li>
+            <li><a href="#portfolio_section">PORTFOLIO</a></li>
+            <li><a href="#contact_section">CONTACT</a></li>
+          </ul>
+        </div>
         <!-- 로고 링크 (네비바 왼쪽) -->
         <a href="#" class="logo">logo</a>
         <!-- 네비 리스트 태그 (네비바 중앙)-->
