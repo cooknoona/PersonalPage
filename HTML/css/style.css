@@ -25,26 +25,20 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 반응형 웹 전용 아이콘 기본값을 숨김으로 표시한후 미디어쿼리를 통해
-화면 적용 */
-.menu-icon {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: black;
-}
-
 .logo {
   display: flex;
   justify-content: start;
-  padding-left: 50px;
+  padding-left: 60px;
   font-size: 30px;
   color: #f5f7f7;
 }
 
 .nav_list {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav_list > li {
@@ -141,14 +135,16 @@ a {
   display: flex;
   justify-content: space-between;
   padding-left: 30px;
-  padding-right: 110px;
+  padding-right: 30px;
   padding-top: 100px;
+  flex-wrap: wrap;
 }
 
 .about_left_layout {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex: 1;
 }
 
 .about_left_layout > h3 {
@@ -167,7 +163,6 @@ a {
   font-size: 18px;
   line-height: 1.8;
   max-width: 80%;
-  /* overflow-wrap: break-word; */
 }
 
 .skill_and_career {
@@ -202,7 +197,6 @@ a {
 }
 
 .skill_item > img {
-  display: flex;
   width: 38px;
   height: 38px;
 }
@@ -229,99 +223,51 @@ a {
 .about_right_layout {
   display: flex;
   flex-direction: start;
+  flex: 1;
+  justify-content: center;
 }
 
 .my_selfie img {
-  height: 650px;
-  width: 500px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
   border-radius: 30px;
 }
 
-.project_layout {
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.project_item_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.project_item {
-  position: relative;
-  display: flex;
-}
-
-.project_item > img {
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  width: 400px;
-  border-radius: 15px;
-}
-
-.project_desc {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  transition: all 0.3s ease-in 0.1s;
-  color: white;
-  box-sizing: border-box;
-  border-radius: 15px;
-  gap: 2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.project_desc > h2 {
-  font-size: 25px;
-  color: #fff7b3;
-}
-
-.project_desc > p {
-  font-size: 20px;
-}
-
-.project_desc:hover {
-  opacity: 1;
-}
-
+.project_layout,
 .portfolio_layout {
   display: flex;
   justify-content: center;
   padding-top: 100px;
 }
 
+.project_item_container,
 .portfolio_item_container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
+.project_item,
 .portfolio_item {
   position: relative;
   display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+.project_item > img,
 .portfolio_item > img {
-  display: flex;
-  flex-direction: column;
-  height: 350px;
-  width: 400px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 15px;
 }
 
+.project_desc,
 .portfolio_desc {
   position: absolute;
   display: flex;
@@ -342,15 +288,18 @@ a {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.project_desc > h2,
 .portfolio_desc > h2 {
   font-size: 25px;
   color: #fff7b3;
 }
 
+.project_desc > p,
 .portfolio_desc > p {
   font-size: 20px;
 }
 
+.project_desc:hover,
 .portfolio_desc:hover {
   opacity: 1;
 }
@@ -400,54 +349,80 @@ a {
   gap: 2rem;
 }
 
-/* 미디어 쿼리, 모바일 또는 태블릿 전용 */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
+@media (max-width: 900px) {
+  .skill_and_career {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: 100%;
-    height: 70px;
-    z-index: 1000;
-    background-color: #000407;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
   }
 
-  .skill_item > img {
-    /* max-width: 90%; */
+  .career_all {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .career_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+
+  .career_list li {
+    margin-bottom: 10px;
+    white-space: normal;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .about_layout {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .about_right_layout {
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .my_selfie img {
-    width: 80%; /* 부모 요소의 너비에 비례 */
-    height: auto; /* 이미지 비율 유지 */
-    max-height: 400px; /* 최대 높이 제한 */
+    max-width: 100%;
+    height: auto;
   }
 
-  .project_item > img {
+  .about_content img,
+  .portfolio img,
+  .project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%;
+  }
+
+  .about_content {
+    padding: 20px;
+  }
+
+  .portfolio {
     display: flex;
     flex-direction: column;
-    height: 350px;
-    width: 400px;
-    border-radius: 15px;
+    gap: 20px;
   }
-}
 
-@media (max-width: 480px) {
-  .my_selfie img {
-    width: 80%; /* 부모 요소의 너비에 비례 */
-    height: auto; /* 이미지 비율 유지 */
-    max-height: 400px; /* 최대 높이 제한 */
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
